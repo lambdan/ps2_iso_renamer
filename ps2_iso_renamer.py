@@ -43,7 +43,7 @@ for file in os.listdir('.'):
 		gameID = string.replace('_', '-')
 		gameID = gameID.replace('.', '')
 		title = gameTitleFromCSV(gameID)
-		cleanedTitle = "".join(c for c in title if c.isalnum() or c in keepcharacters).rstrip()
+		cleanedTitle = "".join(c for c in title if c.isalnum() or c in keepcharacters).rstrip() # https://stackoverflow.com/a/7406369
 		cleanedTitle = cleanedTitle.replace('  ', ' ')
 		new_name = cleanedTitle + ' [' + gameID + '].iso'
 
