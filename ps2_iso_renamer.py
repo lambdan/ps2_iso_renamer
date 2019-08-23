@@ -10,6 +10,7 @@ def gameTitleFromCSV(ID):
 	
 second_chars = [b'C', b'L'] # SCxS, SLxS
 third_chars = [b'P', b'E', b'U'] # SxPS, SxES, SxUS
+fourth_chars = [b'S', b'M']
 
 for file in os.listdir('.'):
 	if file.lower().endswith('iso'):
@@ -26,7 +27,7 @@ for file in os.listdir('.'):
 						if byte in third_chars:
 							string += byte.decode()
 							byte = f.read(1)
-							if byte == b'S':
+							if byte in fourth_chars:
 								string += byte.decode()
 								byte = f.read(7)
 								string += byte.decode()
