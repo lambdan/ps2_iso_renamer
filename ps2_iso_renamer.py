@@ -1,4 +1,4 @@
-import sys, os, re
+import sys, os
 titles = 'ps2_ids.txt'
 keepcharacters = (' ','.','_','-') # Characters to keep when cleaning up the filename
 
